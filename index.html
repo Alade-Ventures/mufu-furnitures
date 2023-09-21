@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/css/material-icons.css">
+</head>
+<style>
+    header{
+        background: url(assets/img/header4.jpg);
+        min-height: 600px;
+        background-size: cover;
+        background-position: center;
+    }
+    .gfg{
+        /* margin: 3%; */
+        position: relative;
+    }
+    .text-container{
+        position: absolute;
+        background-color: rgba(190, 165, 132, 0.897);
+        left: 45%;
+        top: 92%;
+        /* padding: 0 1rem; */
+    }
+    .btn1{
+        cursor: pointer;
+        border: 1px solid rgba(0, 0, 0, 0.6);
+        height: 50px;
+        background-color: transparent;
+        width: 200px;
+        /* border-radius: 20px; */
+        color: #3498db;
+        font-size: 1.5em;
+        box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+    }
+    .btn2{
+        cursor: pointer;
+        border: 1px solid rgba(0, 0, 0, 0.37);
+        background-color: transparent;
+    }
+    .box{
+        /* width: 550px; */ 
+         padding: 20px;
+    }
+    .btn1:hover{
+        background-color: rgba(190, 165, 132, 0.897);
+    }
+</style>
+<body>
+    <!-- <header> -->
+        <nav class="">
+            <div class="nav-wrapper white">
+                <a href="" class="sidenav-trigger" data-target="mobile-demo">
+                    <i class="material-icons black-text">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down ">
+                    <li><a class="black-text" href="index.html">Home</a></li>
+                    <li><a class="black-text" href="">Int-design</a></li>
+                    <li><a class="black-text" href="">Chairs</a></li>
+                    <li><a class="black-text" href="">Furnitures</a></li>
+                </ul>
+                <ul class=" hide-on-med-and-down ">
+                    <li><a class="black-text" href="index.html" >Search</a></li>
+                    <li><a class="black-text" href="">Cart</a></li>
+                    <li><a class="black-text" href="">Login</a></li>
+                </ul>
+            </div>
+            <ul class="sidenav" id="mobile-demo">
+                <li><a class="black-text" href="index.html" >Search</a></li>
+                <li><a class="black-text" href="">Cart</a></li>
+                <li><a class="black-text" href="">Login</a></li>
+            </ul>
+        </nav>
+    <header class="gfg">
+        <div class="text-container">
+             <!-- <a href="" class="btn-large black center-align">MORE</a> -->
+             <div class="box">
+                <b><p>Crafted by hand & made from sustainable wooden materials</p></p></b>
+                <a href="" class="btn black-text btn2">view more</a>
+             </div>
+        </div>
+    </header>
+        <section id="sec1" style="padding:40px;">
+            <div class="">
+                <div class="row">
+                    <div class="col l4 m12 s12">
+                        <img src="assets/img/chair.jpg" class="responsive-img">
+                    </div>
+                    <div class="col l4 m12 s12" style="padding: 80px;">
+                        <b><h5>Designed with care</h5></b>
+                        <hr>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, necessitatibus est maxime nobis labore officiis! Voluptate ducimus.</p>
+                        <!-- <a href="" class="btn black-text btn1">view more</a> -->
+                    </div>
+                    <div class="col l4 m12 s12" style="padding: 80px;">
+                        <b><h5>Finest Craftmanship</h5></b>
+                        <hr>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, necessitatibus est maxime nobis labore officiis! Voluptate ducimus.</p>
+                        <!-- <a href="" class="btn black-text btn1">view more</a> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sec2" style="padding: 40px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 m6 s12">
+                        <img src="assets/img/chair3.jpg" class="responsive-img">
+                    </div>
+                    <div class="col l6 m6 s12" style="padding: 80px;">
+                        <h6>Experience chairs made just for you</h6>
+                          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error explicabo esse doloribus veritatis molestiae illum, </p>
+                          <a href="" class="btn black-text btn1">view more</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col l6 m6 s12" style="padding: 80px;">
+                        <h6>Experience dinnings made just for you</h6>
+                          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error explicabo esse doloribus veritatis molestiae illum, </p>
+                          <a href="" class="btn black-text btn1">view more</a>
+                    </div>
+                    <div class="col l6 m6 s12" ">
+                        <img src="assets/img/dinner2.jpg" class="responsive-img" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+       <section id="sec3">
+        <div class="parallax-container">
+            <div class="parallax">
+            <img src="assets/img/header3.jpg" alt="">
+            </div>
+        </div>
+       </section>
+<br><br><br><br><br><br>
+    <!-- <div class="cont">
+    <img src="assets/img/chair.jpg" alt="">
+    <button class="btn">MORE</button>
+    </div> -->
+</body>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/materialize.min.js"></script>
+<script>
+    $(document).ready(function(){
+    $('.sidenav').sidenav();
+    $('.parallax').parallax();
+    });
+   </script>
+</html>
