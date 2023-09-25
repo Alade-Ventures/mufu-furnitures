@@ -154,9 +154,11 @@
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
+
+
             <div class="col s12 l5 offset-l1">
               <h4>Get in touch</h4>
-              <form id="contact-form">
+              <form onsubmit="sendEmail(); reset(); return false;">
                 <div class="input-field">
                   <i class="material-icons prefix">account_circle</i>
                   <input type="text" id="name" name="name" required />
@@ -171,7 +173,7 @@
     
                 <div class="input-field">
                   <i class="material-icons prefix">phone</i>
-                  <input type="number" id="num" name="num" required />
+                  <input type="number" id="phone" name="num" required />
                   <label for="num">Phone Number</label>
                 </div>
                 <div class="input-field">
@@ -228,9 +230,61 @@
           <div class="container center-align">&copy; 2023 Mufutau Ventures</div>
         </div>
       </footer>
-</body>
-<script src="assets/js/jquery.js"></script>
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
+      <script src="assets/js/jquery.js"></script>
 <script src="assets/js/materialize.min.js"></script>
+</body>
+<script>
+  function sendEmail(){
+    Email.send({
+        Host : "smtp.gmail.com",
+        Username : "aladenosirat@gmail.com",
+        Password : "@Nursetiti17",
+        To : 'nosiratalade1@gmail.com',
+        From : document.getElementById("email").value,
+        Subject : "New Contact Form Enquiry",
+        Body : "And this is the body"
+      }).then(
+      message => alert(message)
+      );
+      }
+</script>
+
+
+
+<!-- <script>
+  function validateForm() {
+    var name = document.forms["contactForm"]["name"].value;
+    var email = document.forms["contactForm"]["email"].value;
+    var message = document.forms["contactForm"]["message"].value;
+    var error = "";
+
+    if (name == "") {
+        error += "Please enter your name.\n";
+    }
+
+    if (email == "") {
+        error += "Please enter your email address.\n";
+    } else if (!validateEmail(email)) {
+        error += "Please enter a valid email address.\n";
+    }
+
+    if (message == "") {
+        error += "Please enter a message.\n";
+    }
+
+    if (error != "") {
+        alert(error);
+        return false;
+    }
+}
+
+function validateEmail(email) {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+} -->
+
+</script>
 <script>
     $(document).ready(function(){
     $('.sidenav').sidenav();
